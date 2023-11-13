@@ -8,9 +8,14 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <errno.h>
 
+#define INPUT_SIZE 100
 
 extern char **environ;
+
+int main(void);
+void exec(char *command);
 
 
 #endif /* SHELL_H */
