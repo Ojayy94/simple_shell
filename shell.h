@@ -14,8 +14,10 @@
 
 extern char **environ;
 
+#define PROMPT "$ "
+
 int main(void);
-void exec(char *command);
+int execute_command(char *command);
 
 
 #endif /* SHELL_H */
