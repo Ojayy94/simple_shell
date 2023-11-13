@@ -11,6 +11,7 @@
 #include <errno.h>
 
 #define INPUT_SIZE 100
+#define MAX_INPUT_SIZE 100
 
 extern char **environ;
 
@@ -18,6 +19,7 @@ extern char **environ;
 
 int main(void);
 int execute_command(char *command);
-
+int my_exit(void);
+/* void execute_command(char *command); */
 
 #endif /* SHELL_H */
