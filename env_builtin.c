@@ -1,11 +1,14 @@
 #include "shell.h"
-
-void env_shell()
+/**
+ * env_shell - get shell environment variable
+ * Return: env
+ */
+void env_shell(void)
 {
-        char **env;
+	char **env;
 
-        for (env = environ; *env != NULL; env++)
-        {
-                printf("%s\n", *env);
-        }
+	for (env = environ; *env != NULL; env++)
+	{
+		printf("%s\n", *env);
+	}
 }
