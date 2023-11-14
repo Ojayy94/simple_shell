@@ -21,7 +21,7 @@ int run_shell(void)
 		{
 			if (is_interactive)
 				printf("\n");
-			free(input), return 0;
+			free(input), return (0);
 		}
 		if (n > 0)
 			input[n - 1] = '\0';
@@ -31,22 +31,22 @@ int run_shell(void)
 			env_shell();
 		else
 		{
-			char *command = strtok(input, " "), char **args = tokenize_input(input);
+			char *command = strtok(input, " ");
+			char **args = tokenize_input(input);
 
 			if (access(command, X_OK) == 0)
 				execute_command_with_path(command, args);
 			else
 				fprintf(stderr, "Command not found: %s\n", command);
 			for (i = 0; args[i] != NULL; i++)
-			{
 				free(args[i]);
-			}
 			free(args);
 		}
 		if (!is_interactive)
 			break;
 	}
-	free(input), return (1);
+	free(input);
+	return (1);
 }
 
 /**
