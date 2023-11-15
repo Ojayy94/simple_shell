@@ -27,7 +27,7 @@ int run_shell(void)
 		if (n > 0)
 			input[n - 1] = '\0';
 		if (strcmp(input, "exit") == 0)
-			free(input), return (0); /* exit_shell(); */
+			free(input), return (0);
 		else if (strcmp(input, "env") == 0)
 			env_shell();
 		else
