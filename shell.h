@@ -16,8 +16,8 @@ extern char **environ;
 void execute_command(char *command);
 void execute_command_with_args(char *command, char **args);
 void execute_command_with_path(char *command, char **args);
-void exit_shell();
-void env_shell();
+void exit_shell(void);
+void env_shell(void);
 char **tokenize_input(char *input);
 void handle_command_line_with_args(int argc, char *argv[]);
 
