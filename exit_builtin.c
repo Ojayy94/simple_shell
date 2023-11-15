@@ -8,5 +8,5 @@
 void exit_shell(void)
 {
 	while (1)
-		exit (0);
+		exit(0);
 }
