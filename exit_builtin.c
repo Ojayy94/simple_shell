@@ -7,5 +7,6 @@
 
 void exit_shell(void)
 {
-	exit(0);
+	while (1)
+		exit (0);
 }
